@@ -20,7 +20,7 @@
 | 路径 | 属性 |
 |---|---|
 | `src/drone_bringup/` | 被狗啃的地方，需要你来修理修理 |
-| `install/` | 存放了已编译好的后端文件，请勿删除 |
+| `install/` | 已编译好的后端文件，请勿删除；<br>编译时如需要drone_backend包做依赖，请source install/setup.zsh |
 | `run_sim.sh` | 只启动后端（sim + sensor），方便你单独调 |
 | `mission.launch` | 一键起 sim + sensor + 你的节点（在 `src/drone_bringup/launch/`） |
 
@@ -37,9 +37,9 @@ roslaunch drone_bringup mission.launch
 
 请快帮他修理修理吧，家豪gg快要哭出来啦
 
-### 2.1 阶段目标：`catkin_make` 通过，且 `roslaunch drone_bringup mission.launch` 能把 sim、sensor、`flight_node` 三个节点都起来（`example_listener` 是给你照抄的完整示例）
+### 2.1 阶段目标：`catkin_make` 通过，且 `roslaunch drone_bringup mission.launch` 能把`flight_node` 节点起起来
 
-### 2.2 提示：阶段一只需简单修改`CMakeLists.txt` `package.xml`即可，不涉及其他文件修改
+### 2.2 提示：阶段一只需简单修改`drone_bringup`包内的`CMakeLists.txt` `package.xml`即可，不涉及其他文件修改
 
 ### 2.3 你可能需要了解
 
